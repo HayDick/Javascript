@@ -1,0 +1,72 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+$red: #ac2c2c;
+$green: #1bb41b;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+
+.flex-box-container-1,
+.flex-box-container-2 {
+  display: flex;
+  padding: 1em;
+  border: 1px solid black;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex-box-container-1 div {
+  padding: 1em;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.flex-box-container-2 .img {
+  border: 1px solid green;
+  width: 250px;
+  box-shadow: $box-shadow;
+  margin: 1em;
+}
+
+.flex-box-rps {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-box-rps img:hover {
+  box-shadow: $box-shadow;
+}
+
+.call-outs-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: $red;
+  max-width: 1440px;
+  margin: 40px auto 0 auto;
+  // display: ;
+}
+.call-out {
+  background-color: $green;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-basis: 30%;
+}
+.banner {
+  margin: auto;
+  background: aquamarine;
+  width: 249px;
+}

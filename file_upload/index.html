@@ -1,0 +1,223 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+    <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+    <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="page-wrap">
+      <div>
+        <form id="button-selector">
+          <label for="" id="">How many buttons?</label>
+          <br />
+          <select
+            id=""
+            onchange="buttonSelection(this.options[this.selectedIndex].value)"
+          >
+            <option vlaue="">select</option>
+            <option vlaue="">2-buttons</option>
+            <option vlaue="">3-buttons</option>
+            <option vlaue="">4-buttons</option>
+          </select>
+        </form>
+      </div>
+
+      <div id="2-buttons" style="display: none;">
+        <div class="choose-links">
+          <span>Add links for ech button</span>
+          <div>
+            <h2>Link 1</h2>
+            <input type="text" id="link-1" />
+            <button onclick="insertLink()">Insert link</button>
+          </div>
+          <div>
+            <h2>Link 2</h2>
+            <input type="text" id="link-2" />
+          </div>
+        </div>
+        <div class="choose-file">
+          <p>
+            <label for="file" style="cursor: pointer;">Desktop Image</label>
+          </p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadDT(event)"
+            />
+          </p>
+          <p><label for="file" style="cursor: pointer;">Mobile Image</label></p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadMobile(event)"
+            />
+          </p>
+        </div>
+      </div>
+      <div id="3-buttons" style="display: none;">
+        <div class="choose-links">
+          <span>Add links for ech button</span>
+          <div>
+            <h2>Link 1</h2>
+            <input type="text" id="link-1" />
+          </div>
+          <div>
+            <h2>Link 2</h2>
+            <input type="text" id="link-2" />
+          </div>
+          <div>
+            <h2>Link 3</h2>
+            <input type="text" id="link-3" />
+          </div>
+        </div>
+        <div class="choose-file">
+          <p>
+            <label for="file" style="cursor: pointer;">Desktop Image</label>
+          </p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadDT(event)"
+            />
+          </p>
+          <p><label for="file" style="cursor: pointer;">Mobile Image</label></p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadMobile(event)"
+            />
+          </p>
+        </div>
+      </div>
+
+      <div id="4-buttons" style="display: none;">
+        <div class="choose-links">
+          <span>Add links for ech button</span>
+          <div>
+            <h2>Link 1</h2>
+            <input type="text" id="link-1" />
+          </div>
+          <div>
+            <h2>Link 2</h2>
+            <input type="text" id="link-2" />
+          </div>
+          <div>
+            <h2>Link 3</h2>
+            <input type="text" id="link-3" />
+          </div>
+          <div>
+            <h2>Link 4</h2>
+            <input type="text" id="link-4" />
+          </div>
+        </div>
+        <div class="choose-file">
+          <p>
+            <label for="file" style="cursor: pointer;">Desktop Image</label>
+          </p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadDT(event)"
+            />
+          </p>
+          <p><label for="file" style="cursor: pointer;">Mobile Image</label></p>
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadMobile(event)"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="html-to-output" style="display: none;">
+        <div class="desk_img_container block_wrap w_100">
+          <img
+            id="output-desktop"
+            width="200"
+            class="desktop-view desk_btn_img"
+            alt=""
+          />
+          <button class="btn-1 primary output-DT-btn">
+            <a class="btn_link_1" title="SHOP NOW" href="">SHOP BABY</a>
+          </button>
+          <button class="btn-2 primary output-DT-btn">
+            <a class="btn_link" title="SHOP NOW" href="">SHOP KIDS</a>
+          </button>
+          <button class="btn-3 primary output-DT-btn">
+            <a class="btn_link" title="SHOP NOW" href="">SHOP MEN</a>
+          </button>
+          <button class="btn-4 primary output-DT-btn">
+            <a class="btn_link" title="SHOP NOW" href="">SHOP WOMEN</a>
+          </button>
+        </div>
+        <div class="mobile_img_container block_wrap w_100">
+          <img
+            id="output-mobile"
+            width="200"
+            class="mobile-view mobile_btn_img"
+            alt=""
+          />
+          <button style="display: none;" class="btn-1 primary output-mobile-bt">
+            <a class="btn_link" href="">SHOP WOMEN</a>
+          </button>
+          <button style="display: none;" class="btn-2 primary output-mobile-bt">
+            <a class="btn_link" href="">SHOP MEN</a>
+          </button>
+          <button style="display: none;" class="btn-3 primary output-mobile-bt">
+            <a class="btn_link" href="">SHOP KIDS</a>
+          </button>
+          <button style="display: none;" class="btn-4 primary output-mobile-bt">
+            <a class="btn_link" href="">SHOP BABY</a>
+          </button>
+        </div>
+      </div>
+      <div>
+        <a
+          class="button"
+          href="#source-code"
+          id="view-source"
+          onclick="prettyPrint()"
+          >View Source</a
+        >
+
+        <div id="source-code">
+          <a href="#" id="x"
+            ><img
+              src="http://css-tricks.com/examples/ViewSourceButton/images/x.png"
+              alt="close"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

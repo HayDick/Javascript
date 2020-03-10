@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+    <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+    <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="page-wrap">
+      <div>
+          <form>
+            <label for="">How many buttons ?</label>
+            <select onChange="window.document.location.href=this.options[this.selectedIndex].value;">
+              <option vlaue="">select</option>
+              <option vlaue="">2 Buttons</option>
+              <option vlaue="">3 Buttons</option>
+              <option vlaue="">4 Buttons</option>
+      </div>
+      <p><label for="file" style="cursor: pointer;">Desktop Image</label></p>
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadDT(event)"
+        />
+      </p>
+      <p><label for="file" style="cursor: pointer;">Mobile Image</label></p>
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadMobile(event)"
+        />
+      </p>
+
+      <div class="desk_img_container block_wrap w_100">
+        <img
+          id="output-desktop"
+          width="200"
+          class="desktop-view desk_btn_img"
+          alt=""
+        />
+        <button style="display: none;" class="btn-1 primary output-DT-btn">
+          <a class="btn_link" title="SHOP NOW" href="/baby/november-best"
+            >SHOP BABY</a
+          >
+        </button>
+        <button style="display: none;" class="btn-2 primary output-DT-btn">
+          <a class="btn_link" title="SHOP NOW" href="/kids/november-best"
+            >SHOP KIDS</a
+          >
+        </button>
+        <button style="display: none;" class="btn-3 primary output-DT-btn">
+          <a class="btn_link" title="SHOP NOW" href="/men/november-best"
+            >SHOP MEN</a
+          >
+        </button>
+        <button style="display: none;" class="btn-4 primary output-DT-btn">
+          <a class="btn_link" title="SHOP NOW" href="/baby/november-best"
+            >SHOP WOMEN</a
+          >
+        </button>
+      </div>
+      <div class="mobile_img_container block_wrap w_100">
+        <img
+          id="output-mobile"
+          width="200"
+          class="mobile-view mobile_btn_im"
+          alt=""
+        />
+        <button style="display: none;" class="btn-1 primary output-mobile-bt">
+          <a class="btn_link" href="/women/best-of-november">SHOP WOMEN</a>
+        </button>
+        <button style="display: none;" class="btn-2 primary output-mobile-bt">
+          <a class="btn_link" href="/men/november-best">SHOP MEN</a>
+        </button>
+        <button style="display: none;" class="btn-3 primary output-mobile-bt">
+          <a class="btn_link" href="/kids/november-best">SHOP KIDS</a>
+        </button>
+        <button style="display: none;" class="btn-4 primary output-mobile-bt">
+          <a class="btn_link" href="/baby/november-best">SHOP BABY</a>
+        </button>
+      </div>
+      <a
+        class="button"
+        href="#source-code"
+        id="view-source"
+        onclick="prettyPrint()"
+        >View Source</a
+      >
+
+      <div id="source-code">
+        <a href="#" id="x"
+          ><img
+            src="http://css-tricks.com/examples/ViewSourceButton/images/x.png"
+            alt="close"
+        /></a>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

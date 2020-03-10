@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="test"></p>
+
+    <script src="home.js"></script>
+    <script>
+      var studentsJSN = `
+        [
+          {
+          "first": "Hay",
+          "last": "Dick",
+          "age": 30
+        },
+        {
+          "first": "Lera",
+          "last": "Prometov",
+          "age": 15
+        }
+      ]`;
+      console.log(JSON.parse(studentsJSN));
+
+      var str = '{"hello":"world"}';
+      try {
+        var obj = JSON.parse(str); // this is how you parse a string into JSON
+        document.body.innerHTML += obj.hello;
+      } catch (ex) {
+        console.error(ex);
+      }
+    </script>
+  </body>
+</html>
